@@ -1,7 +1,3 @@
-# Brain Fog v0.6.9
-
-Extract the complete folder and open `index.html` in a WebGL-capable browser. Local HTTP preview is also supported. All runtime models, textures, fonts, music and electrical audio are bundled.
-
 WASD — move · Shift — run · Space — jump · Mouse — look · Esc — pause · M — mute effects.
 
 ## v0.6.9 changes
