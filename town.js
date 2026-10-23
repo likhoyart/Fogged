@@ -38,6 +38,7 @@ async function loadTownAssets(){
  for(const id of ['01','03','04','05B','06','07','08','09','T1','LAMP','OAK','X2','TORCH']){
   $('status').textContent='Loading town · '+id;
   await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='assets/'+id+'.js';script.onload=()=>{script.remove();resolve();};script.onerror=()=>reject(new Error('Missing asset '+id));document.head.append(script);});
+  if(id==='04'){for(const part of ['01','02','03','04','05']){await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='assets/04-parts/04-'+part+'.js';script.onload=()=>{script.remove();resolve();};script.onerror=()=>reject(new Error('Missing asset 04 part '+part));document.head.append(script);});}}
   const str=atob(TOWN_ASSETS[id]);const bytes=new Uint8Array(str.length);for(let i=0;i<str.length;i++)bytes[i]=str.charCodeAt(i);
   const source=(await loader.parseAsync(bytes.buffer,'')).scene;delete TOWN_ASSETS[id];
   if(id==='OAK'){
