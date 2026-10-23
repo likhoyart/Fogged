@@ -1,0 +1,79 @@
+{
+  "version": 2,
+  "format": {
+    "codec": "mp3",
+    "bitrate_kbps": 192,
+    "sample_rate_hz": 44100,
+    "channels": 2
+  },
+  "playback": {
+    "order": "sequential-repeat",
+    "automatic_crossfade_seconds": 6,
+    "manual_crossfade_seconds": 3,
+    "curve": "equal-power-sine-cosine",
+    "default_volume": 0.35,
+    "continues_in_game_pause": true
+  },
+  "tracks": [
+    {
+      "title": "Иллюзия",
+      "file": "audio/illusion.mp3",
+      "source_name": "Иллюзия.mp3",
+      "duration_seconds": 167.444898,
+      "bytes": 4019395,
+      "sha256": "6ab985692fe211899897ede2e28325ad71a3ec8ba9afe7161608ee1c0eed9f42",
+      "source_trim_seconds": [
+        0.4,
+        167.8
+      ],
+      "constant_gain_db": -8.9,
+      "measured_lufs": -20.27,
+      "measured_true_peak_dbtp": -9.12
+    },
+    {
+      "title": "Трава",
+      "file": "audio/trava.mp3",
+      "source_name": "Трава.mp3",
+      "duration_seconds": 148.950204,
+      "bytes": 3575497,
+      "sha256": "7a5a458416d72ae8e77d3c7053a21cf8a99adb2c6b81c2bb8d8da780ff1f0744",
+      "source_trim_seconds": [
+        0,
+        148.9
+      ],
+      "constant_gain_db": 0.96,
+      "measured_lufs": -20.26,
+      "measured_true_peak_dbtp": -8.68
+    },
+    {
+      "title": "Марш",
+      "file": "audio/march.mp3",
+      "source_name": "Марш.mp3",
+      "duration_seconds": 209.53,
+      "bytes": 5030688,
+      "sha256": "016c1b95efcb3e9a1234555f6f2eaaa45f28f2f2ad89dcce2d6c1cf2eee65a5e",
+      "source_trim_seconds": [
+        0,
+        209.53
+      ],
+      "constant_gain_db": -11.75,
+      "measured_lufs": -20.27,
+      "measured_true_peak_dbtp": -11.08
+    },
+    {
+      "title": "Фантазия",
+      "file": "audio/fantasy.mp3",
+      "source_name": "Фантазия.mp3",
+      "duration_seconds": 265.17,
+      "bytes": 6364959,
+      "sha256": "74f000fc361517953cd8016a787653ba0e0c34b04b4bf18b94b825be196bcebe",
+      "source_trim_seconds": [
+        0,
+        265.17
+      ],
+      "constant_gain_db": 1.15,
+      "measured_lufs": -20.28,
+      "measured_true_peak_dbtp": -0.38
+    }
+  ]
+}

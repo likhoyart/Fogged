@@ -1,0 +1,513 @@
+{
+  "version": "0.6.9",
+  "status": "Diffuse streetlight halos; softer flashlight; stronger rain; no breathing or player hand",
+  "units": "metres",
+  "axes": "X east, Y up, Z south; origin at junction centre",
+  "assets": [
+    {
+      "id": "01",
+      "name": "Abandoned House",
+      "author": "Sengchor",
+      "url": "https://sketchfab.com/3d-models/abandoned-house-a0c01ce35a474545b805c0739806aace",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/01.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "6ac4eb7a383e871a1795f786f1acf2f74f1e1cda4928e390ed0622c388f4e479",
+      "positionXZ": [
+        0,
+        -86
+      ],
+      "yawDegrees": 0.0,
+      "targetWidthMetres": 18,
+      "trianglesBefore": 12227,
+      "trianglesAfter": 11841,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "02",
+      "name": "Abandoned House",
+      "author": "Leon.com",
+      "url": "https://sketchfab.com/3d-models/abandoned-house-76678173760042c7aab7a8dd2666b3b0",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/02.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "d2064a1fd0edd91f4ec2df6f28f3176b7e96d74aebadd256371671c6f19bcdce",
+      "positionXZ": [
+        15,
+        -61
+      ],
+      "yawDegrees": -90.0,
+      "targetWidthMetres": 12,
+      "trianglesBefore": 6478,
+      "trianglesAfter": 4580,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2.",
+      "placed": false,
+      "runtimeLoaded": false,
+      "removalReason": "User requested removal of distant house beside ruined house."
+    },
+    {
+      "id": "03",
+      "name": "Suburban shabby house low poly",
+      "author": "Simlion",
+      "url": "https://sketchfab.com/3d-models/suburban-shabby-house-low-poly-f4678340de204c829e79a01f216e1be0",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/03.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "3bf8375572134dc78b22e1fd29d32ba54bdf7f39762de4c9200c09e816209382",
+      "positionXZ": [
+        15,
+        -34
+      ],
+      "yawDegrees": -90.0,
+      "targetHeightMetres": 8.3,
+      "trianglesBefore": 9985,
+      "trianglesAfter": 9315,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "04",
+      "name": "Abandoned Weapon Shop",
+      "author": "YadroGames",
+      "url": "https://sketchfab.com/3d-models/abandoned-building-shop-old-house-0ed14367314946b298d9a58db66da040",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/04.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "80bf183fa6f447dfa3d3a1cb2e8e227f771f8b7737a36002f1cf89641bbdc992",
+      "positionXZ": [
+        30,
+        -17
+      ],
+      "yawDegrees": 0.0,
+      "targetWidthMetres": 19,
+      "trianglesBefore": 12742,
+      "trianglesAfter": 12466,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "05A",
+      "name": "Old American Brick Building with Shop",
+      "author": "Orzechu",
+      "url": "https://sketchfab.com/3d-models/low-poly-old-american-brick-building-with-shop-3170993b67ee4e58b27d69d5877f71bd",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/05A.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "175ba7382b61a6f45b4634cb56df18f2543d3585da3d52c51b7629d4b09505be",
+      "positionXZ": [
+        54,
+        -16
+      ],
+      "yawDegrees": 0.0,
+      "targetWidthMetres": 19,
+      "trianglesBefore": 2946,
+      "trianglesAfter": 2838,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "05B",
+      "name": "Low Poly Antique Shop",
+      "author": "JonParrish",
+      "url": "https://sketchfab.com/3d-models/low-poly-antique-shop-free-download-8b0d4ce8f9d143518154e61ce25d305a",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/05B.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "note": "Only the used bench is shipped in v0.6.2; unused alternate shop textures removed.",
+      "sha256GLB": "6d0a182472958cb0c7e24160711607ecafb535318efd2051098c7c730635c7de",
+      "trianglesBefore": 760,
+      "trianglesAfter": 228,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "06",
+      "name": "Warehouse FBX Model Free",
+      "author": "Nicholas-3D",
+      "url": "https://sketchfab.com/3d-models/warehouse-fbx-model-free-daa7fd3ff88945298d00045ca40a4c03",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/06.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "b0de356e19160bb43be9d3b95e607b0e78149f3c4c538f6c3c7f44b074cdf6d1",
+      "positionXZ": [
+        89,
+        -3
+      ],
+      "yawDegrees": 0.0,
+      "targetWidthMetres": 16,
+      "trianglesBefore": 11106,
+      "trianglesAfter": 9342,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "07",
+      "name": "Fire Station No. 1",
+      "author": "CommonSpence",
+      "url": "https://sketchfab.com/3d-models/fire-station-no-1-87edf04deb28434993274d9f05070865",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/07.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "4fba86d1c30cb2b9da9927306cea9c1bee79f1a8766f9d5bf8c67b7d4151e3f7",
+      "positionXZ": [
+        0,
+        29
+      ],
+      "yawDegrees": 180.0,
+      "targetWidthMetres": 32,
+      "trianglesBefore": 3784,
+      "trianglesAfter": 3656,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "08",
+      "name": "Guard Booth with interior",
+      "author": "castleonsandYT",
+      "url": "https://sketchfab.com/3d-models/guard-booth-with-interior-181cd7b921c14f70ba5b64d3f4fdd8db",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/08.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "53fdd6e779ef04149021ac4418fa8a0a7d0dfafc3f9374314f138af8826d8311",
+      "positionXZ": [
+        30,
+        16
+      ],
+      "yawDegrees": 90.0,
+      "targetWidthMetres": 3.6,
+      "trianglesBefore": 4850,
+      "trianglesAfter": 3670,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "09",
+      "name": "Old Lighthouse",
+      "author": "Nirved Kamble",
+      "url": "https://sketchfab.com/3d-models/old-lighthouse-19e1ff049db74dc8b6173976417c1048",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/09.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "aa3294288459c82a98c7d71da6a0a97457a29102e1f67d05f2d22dc2cf7265b5",
+      "positionXZ": [
+        -77,
+        -28
+      ],
+      "yawDegrees": 0.0,
+      "targetHeightMetres": 22,
+      "trianglesBefore": 79969,
+      "trianglesAfter": 53791,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "T1",
+      "name": "Transformer Booth",
+      "author": "SΛNDRIK",
+      "url": "https://sketchfab.com/3d-models/transformer-booth-lowpoly-9d9a74a55f384b6cb80f7453e951f6c8",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/T1.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "5a421b8948cbee10262bceb62d178416b8cd52545e17e20e70942e95144c7d76",
+      "positionXZ": [
+        72,
+        -16
+      ],
+      "yawDegrees": 0.0,
+      "targetWidthMetres": 5.8,
+      "trianglesBefore": 952,
+      "trianglesAfter": 952,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "OAK",
+      "name": "Mighty Oak Trees",
+      "author": "Jagobo",
+      "url": "https://sketchfab.com/3d-models/mighty-oak-trees-4f6ab5594a8a415aba3f958682b9ced5",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/OAK.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "fa11a8cb4c670f5f1a62dd8386a160975e1fbfdf0ab425c302e6a34b2e064e8b",
+      "trianglesBefore": 344224,
+      "trianglesAfter": 16762,
+      "note": "Three complete tree variants; simplified trunks and a subset of enlarged, intact leaf cards, with original UVs.",
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "LAMP",
+      "name": "Rusty Streetlight",
+      "author": "barbodoji",
+      "url": "https://sketchfab.com/3d-models/rusty-streetlight-d75f8d8a26054e3584f55eb07644801a",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/LAMP.js",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "8ee8db4ee6b564f92ff05e12b1d4409f952456ccddafd8c2a26912323b8ca713",
+      "trianglesBefore": 14932,
+      "trianglesAfter": 1940,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "X2",
+      "name": "Fir Tree 01",
+      "author": "Rico Cilliers (model), Rob Tuytel (photos)",
+      "url": "https://polyhaven.com/a/fir_tree_01",
+      "approval": "approved",
+      "licenseReported": "CC0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/X2.js",
+      "note": "Original fir B reduced using original vertex attributes; 6,711 triangles; larger in scene.",
+      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "sha256GLB": "a5f615a589cfecb41b6b624319c1ada7cd26e687ab5fb08f006ad80b06bf732d",
+      "trianglesBefore": 133916,
+      "trianglesAfter": 6711,
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "TORCH",
+      "name": "Flashlight",
+      "author": "Glitch5970",
+      "url": "https://sketchfab.com/3d-models/flashlight-8c82abdd1f394d2f8ac3c1a843796b4a",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/TORCH.js",
+      "trianglesAfter": 2586,
+      "note": "Replaces the signal flashlight. Textures resized/repacked; uniform length 0.38m.",
+      "sha256GLB": "b734f06f3b7a5ddfcbfd6593e8d3204a82222fe18039f1608663580f3f965981",
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    }
+  ],
+  "map": {
+    "junction": {
+      "centerXZ": [
+        0,
+        0
+      ],
+      "sizeXZ": [
+        36,
+        28
+      ]
+    },
+    "northRoad": {
+      "centerXZ": [
+        -2,
+        -46
+      ],
+      "sizeXZ": [
+        8,
+        65
+      ]
+    },
+    "eastRoad": {
+      "centerXZ": [
+        48,
+        0
+      ],
+      "sizeXZ": [
+        61,
+        8
+      ]
+    },
+    "parking": {
+      "centerXZ": [
+        53,
+        27
+      ],
+      "sizeXZ": [
+        32,
+        29
+      ]
+    },
+    "spawnXYZ": [
+      51,
+      1.7,
+      18
+    ],
+    "treesXZ": [
+      [
+        -23,
+        -84
+      ],
+      [
+        -19,
+        -70
+      ],
+      [
+        -20,
+        -56
+      ],
+      [
+        -21,
+        -42
+      ],
+      [
+        -20,
+        -28
+      ],
+      [
+        -20,
+        -16
+      ],
+      [
+        -54,
+        -9
+      ],
+      [
+        -40,
+        -10
+      ],
+      [
+        -26,
+        -9
+      ],
+      [
+        -55,
+        2
+      ],
+      [
+        -54,
+        14
+      ],
+      [
+        -41,
+        16
+      ],
+      [
+        -27,
+        17
+      ],
+      [
+        -31,
+        26
+      ],
+      [
+        30,
+        26
+      ],
+      [
+        30,
+        38
+      ],
+      [
+        32,
+        49
+      ],
+      [
+        44,
+        50
+      ],
+      [
+        55,
+        50
+      ],
+      [
+        66,
+        50
+      ],
+      [
+        76,
+        52
+      ],
+      [
+        76,
+        44
+      ],
+      [
+        76,
+        34
+      ],
+      [
+        76,
+        22
+      ]
+    ],
+    "lampsXZ": [
+      [
+        -8,
+        -68
+      ],
+      [
+        -8,
+        -44
+      ],
+      [
+        -8,
+        -20
+      ],
+      [
+        -15,
+        -9
+      ],
+      [
+        14,
+        11
+      ],
+      [
+        30,
+        -6
+      ],
+      [
+        59,
+        -6
+      ],
+      [
+        76,
+        6
+      ],
+      [
+        35,
+        34
+      ],
+      [
+        70,
+        34
+      ]
+    ],
+    "benchXZ": [
+      -40,
+      2
+    ],
+    "lighthouseSetting": "Forest on dry land; no coastline"
+  },
+  "pending": [],
+  "validation": {
+    "browserAssets": "PASS: real GLTFLoader and browser image decoding; UV channels checked",
+    "geometry": "PASS: all building bounds meet y=0",
+    "navigation": "PASS: spawn, nine routes and wall collision",
+    "settings": "PASS: CPU checks for all resolution and color presets, quality and FPS visibility",
+    "rendering": "NOT VERIFIED: Chrome WebGL disabled",
+    "performance": "Geometry and texture reductions measured; FPS gain not measured"
+  }
+}

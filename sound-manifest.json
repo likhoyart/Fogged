@@ -1,0 +1,11 @@
+{
+  "title": "Electricity Sound Effects",
+  "author": "digitl / Erich Izdepski",
+  "source": "https://opengameart.org/content/electricity-sound-effects",
+  "download": "https://opengameart.org/sites/default/files/electricFX.mp3",
+  "license": "CC BY 3.0",
+  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+  "modifications": "Excerpt 0.08–2.18 seconds; mono 24 kHz PCM; peak 0.7; 15 ms edge fades. 240 Hz RMS envelope from the same samples drives flashlight intensity.",
+  "duration": 2.1,
+  "sha256": "2ef7c633717a3f8fe0b38ea1aad86fe9caa95b946275093fcf799cea128dd974"
+}
