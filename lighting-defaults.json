@@ -1,0 +1,65 @@
+{
+  "version": "0.6.28",
+  "source": "User screenshots 2026-09-13 14:20–14:22",
+  "settings": {
+    "beacon": {
+      "brightness": 219,
+      "density": 245,
+      "focus": 37,
+      "range": 238,
+      "clarity": 45
+    },
+    "street": {
+      "brightness": 173,
+      "density": 53,
+      "focus": 0,
+      "range": 38,
+      "clarity": 55
+    },
+    "flashlight": {
+      "brightness": 238,
+      "density": 82,
+      "focus": 8,
+      "range": 36,
+      "clarity": 72
+    },
+    "headlights": {
+      "brightness": 300,
+      "density": 247,
+      "focus": 38,
+      "range": 12,
+      "clarity": 29
+    },
+    "emergency": {
+      "brightness": 97,
+      "density": 141,
+      "focus": 100,
+      "range": 25,
+      "clarity": 76,
+      "frequency": 14,
+      "speed": 35
+    },
+    "rain": {
+      "density": 300,
+      "speed": 200,
+      "wind": 100,
+      "length": 250,
+      "glass": 200
+    },
+    "storm": {
+      "brightness": 180,
+      "duration": 65,
+      "gap": 95,
+      "interval": 65
+    }
+  },
+  "scene": {
+    "brightness": 90,
+    "contrast": 121,
+    "grain": 15,
+    "vignette": 78
+  },
+  "effectsSource": "Scene and rain approved from user screenshots 2026-09-13 09:54:23 and 09:54:33. Other light defaults preserved.",
+  "headlightSource": "User screenshot 2026-09-13 01:55:05. First launch, migration from v5 to v6, and reset.",
+  "emergencySource": "User screenshot 2026-09-13 01:48:55. First launch, migration from v5 to v6, and reset."
+}

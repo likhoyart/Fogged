@@ -1,0 +1,12 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=path.join(__dirname,'..'),THREE=require(path.join(root,'three.min.js'));
+const old={settings:{beacon:{brightness:222},headlights:{brightness:3},emergency:{frequency:39}},scene:{brightness:81,contrast:129}};
+const ctx=vm.createContext({THREE,console,localStorage:{getItem:k=>k==='brain-fog-light-lab-v5'?JSON.stringify(old):null},document:{getElementById:()=>null}}),run=s=>vm.runInContext(s,ctx);
+run(fs.readFileSync(path.join(root,'light-lab.js'),'utf8'));
+assert.equal(run('lightLabSettings.headlights.brightness'),300);assert.equal(run('lightLabSettings.headlights.density'),247);assert.equal(run('lightLabSettings.headlights.range'),12);assert.equal(run('lightLabSettings.beacon.brightness'),219);assert.equal(run('sceneLabSettings.brightness'),90);assert.equal(run('lightLabSettings.emergency.frequency'),14);
+run(fs.readFileSync(path.join(root,'fire-engine.js'),'utf8'));
+for(const frequency of [5,21,60,120])for(const speed of [25,100,300])for(let t=0;t<12;t+=.071){const [a,b,c]=run(`[emergencyPulse(${t},0,${frequency},${speed}),emergencyPulse(${t},1,${frequency},${speed}),emergencyPulse(${t+60/frequency},0,${frequency},${speed})]`);assert(a>=0&&a<=1&&b>=0&&b<=1);assert(a*b<1e-7);assert(Math.abs(a-c)<1e-6);}
+run(`const root=new THREE.Group(),headlights=new THREE.Mesh(new THREE.BoxGeometry(),new THREE.MeshStandardMaterial()),lenses=[-1,1].map(x=>{const m=new THREE.Mesh(new THREE.BoxGeometry(.2,.1,.4),new THREE.MeshStandardMaterial());m.position.set(x,2,0);root.add(m);return m;});root.updateMatrixWorld(true);fireEngine={time:0,lamps:[new THREE.SpotLight(),new THREE.SpotLight()],emergency:lenses.map(l=>{const light=new THREE.PointLight();new THREE.Box3().setFromObject(l).getCenter(light.position);return light;}),lenses,headlights,headlightPowers:[],emergencyPowers:[],smoke:{material:{uniforms:{time:{},pixelHeight:{}}}}};const target={height:720};applyVehicleLightLab();animateFireEngine(.3);`);
+assert(run('fireEngine.emergency.every((l,i)=>l.isPointLight&&l.decay===2&&l.position.distanceTo(fireEngine.lenses[i].position)<1e-8)'));
+assert(run('vehicleFogDirections.slice(2).every(v=>v.lengthSq()===0)'));
+console.log('PASS: approved headlights migrate independently; point emitters centered in lenses; radial fog; independent pulse cadence and speed');

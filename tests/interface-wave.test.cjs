@@ -1,0 +1,2 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const document={fonts:{ready:{then(){}}},documentElement:{dataset:{}}};let timers=0;vm.runInNewContext(fs.readFileSync(path.join(__dirname,'../interface.js'),'utf8'),{document,setTimeout:()=>timers++});assert.equal(timers,0);assert.equal(document.documentElement.dataset.uiFlicker,'off');console.log('PASS: interface flicker is off and no wave timers start');

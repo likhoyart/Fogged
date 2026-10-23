@@ -1,11 +1,31 @@
 {
-  "title": "Electricity Sound Effects",
-  "author": "digitl / Erich Izdepski",
-  "source": "https://opengameart.org/content/electricity-sound-effects",
-  "download": "https://opengameart.org/sites/default/files/electricFX.mp3",
-  "license": "CC BY 3.0",
-  "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
-  "modifications": "Excerpt 0.08–2.18 seconds; mono 24 kHz PCM; peak 0.7; 15 ms edge fades. 240 Hz RMS envelope from the same samples drives flashlight intensity.",
-  "duration": 2.1,
-  "sha256": "2ef7c633717a3f8fe0b38ea1aad86fe9caa95b946275093fcf799cea128dd974"
+  "electrical": {
+    "source": "soundreality-short-circuit-154595.mp3",
+    "sourcePath": "/Volumes/art/Yandex.Disk.localized/mine/FOGPLAY/Музыка/soundreality-short-circuit-154595.mp3",
+    "provenance": "User supplied",
+    "excerptSeconds": [
+      3,
+      4
+    ],
+    "fadeInSeconds": 0.5,
+    "fadeOutSeconds": 0.5,
+    "duration": 1,
+    "sampleRate": 24000,
+    "peak": 0.8,
+    "firstLastSample": [
+      0.0,
+      -0.0
+    ],
+    "sha256": "e030b0e10fbf0ced487a00dba55ec0abf11e6184916780e29f2e30b2eb7825d0"
+  },
+  "engine": {
+    "source": "engine2.mp3",
+    "sourceContainer": "AAC/M4A despite the .mp3 extension",
+    "provenance": "User supplied",
+    "originalSeconds": 7.986208333333333,
+    "loopSeconds": 7.636208333333333,
+    "crossfadeSeconds": 0.35,
+    "audibleWithinMetres": 20,
+    "sha256": "ff27612d9d027af94e6d83ab93e73b66e00c598cc2238847cdede093c7dca02f"
+  }
 }

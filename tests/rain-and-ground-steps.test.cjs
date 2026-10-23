@@ -1,0 +1,10 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');const p=path.join(__dirname,'..'),THREE=require(path.join(p,'three.min.js')),c=vm.createContext({THREE,innerWidth:1600,innerHeight:900});const run=s=>vm.runInContext(s,c);
+run(fs.readFileSync(path.join(p,'weather.js'),'utf8'));run(`rainGlassTexture={};for(let i=0;i<32;i++)glassDrops.push(newGlassDrop(true,i<24));for(let f=0;f<120;f++)updateRainGlass(1/30);`);
+assert(run('glassDrops.every(d=>Number.isFinite(d.x+d.y+d.r)&&d.r>0&&d.r<=.014)'));
+assert(run('glassPixels.some((v,i)=>i%4===2&&v>0)'),'Water coverage exists');
+assert(run('glassPixels.every((v,i)=>i%4!==2||v>0||(glassPixels[i-2]===128&&glassPixels[i-1]===128))'),'Dry regions have exactly neutral refraction');
+run('glassDrops.length=0;updateRainGlass(0);');assert(run('glassPixels.every((v,i)=>v===(i%4<2?128:0))'),'Atlas clears without smearing old drops');
+run(fs.readFileSync(path.join(p,'ambience.js'),'utf8'));
+run(`let surface='grass';function footstepSurface(){return surface};const audio=Object.create(Ambience.prototype);const voices=[];const node=()=>({connect(){},disconnect(){},gain:{},pan:{}});audio.stepBuffers={ground:[{id:0},{id:1},{id:2},{id:3},{id:4},{id:5}]};audio.stepHistory=[];audio.lastStepIndex={};audio.stepCounts={grass:0,ground:0};audio.stepVoices=new Set();audio.buses={};audio.verbs={};audio.ctx={currentTime:0,createGain:node,createStereoPanner:node,createBufferSource(){const v={...node(),playbackRate:{},start(){}};voices.push(v);return v;}};audio.footstep({x:0,z:0});surface='ground';audio.footstep({x:0,z:0});`);
+assert.equal(run('audio.lastSurface'),'ground');assert(run("audio.stepHistory.every(h=>h.audioSurface==='ground')"));assert(run('voices.every(v=>audio.stepBuffers.ground.includes(v.buffer))'));assert(run('voices[0].buffer!==voices[1].buffer'),'No repeated sample crossing grass/ground');
+console.log('PASS: lens atlas, neutral dry pixels, grass uses existing ground audio without repeating boundary sample');

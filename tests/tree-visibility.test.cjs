@@ -1,0 +1,6 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');const dir=path.join(__dirname,'..'),THREE=require(path.join(dir,'three.min.js'));const ctx=vm.createContext({THREE}),run=s=>vm.runInContext(s,ctx);
+run(`const scene=new THREE.Scene(),camera={position:new THREE.Vector3(0,1.7,0)},treeBatches=[];const mesh=new THREE.InstancedMesh(new THREE.BoxGeometry(2,8,2),new THREE.MeshStandardMaterial(),3);[10,40,90].forEach((x,i)=>mesh.setMatrixAt(i,new THREE.Matrix4().makeTranslation(x,0,0)));mesh.castShadow=true;treeBatches.push(mesh);scene.add(mesh);`);
+run(fs.readFileSync(path.join(dir,'render-optimization.js'),'utf8'));run('prepareTreeVisibility()');assert.equal(run('visibleTreeBatches[0].main.count'),2);assert.equal(run('treeBatches[0].count'),3);assert(run('visibleTreeBatches[0].main.castShadow===false'));
+run('treeBatches[0].onBeforeRender()');assert.equal(run('treeBatches[0].count'),0);run('treeBatches[0].onAfterRender()');assert.equal(run('treeBatches[0].count'),3);
+run('camera.position.x=90;updateTreeVisibility()');assert.equal(run('visibleTreeBatches[0].main.count'),2);assert.equal(run('treeBatches[0].count'),3);
+console.log('PASS: distant camera geometry culled; original tree instances and matrices remain for light shadows');

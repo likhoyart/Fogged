@@ -1,0 +1,15 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');const root=path.join(__dirname,'..'),THREE=require(path.join(root,'three.min.js')),ctx=vm.createContext({THREE,console,localStorage:{getItem:()=>null},document:{getElementById:()=>null}}),run=s=>vm.runInContext(s,ctx);
+for(const file of ['environment.js','terrain.js','town.js','world-details.js','water.js','atmosphere.js','light-lab.js','fire-engine.js'])run(fs.readFileSync(path.join(root,file),'utf8'));
+run(`const scene=new THREE.Scene(),colliders=[];let seed=99;const rnd=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296},rr=(a,b)=>a+(b-a)*rnd();
+ townTree=function(kind,x,z,height,yaw){const g=new THREE.Group();g.position.set(x,0,z);g.userData.grounding={rootXZ:[x,z],gap:-.075};treeObjects.push(g);townObjects.push(g);colliders.push(new THREE.Box3());scene.add(g);};
+ for(const [x,z] of treePositions)townTree('X2',x,z,20,0);for(let i=0;i<48;i++)townTree('X2',-91+(i%6)*10,-96+Math.floor(i/6)*16,20,0);densifyTrees();const original=treeObjects.slice();fillForestGaps();`);
+assert(run('treeObjects.length>450&&treeObjects.length<650'));assert(run('original.every((g,i)=>g===treeObjects[i])'));assert.equal(run('seed'),99);
+assert(run('forestCoverage.filter(c=>c.free>.75&&c.x>0&&c.z<0).every(c=>c.count>=c.target-1)'),'Fill empty eastern/northern cells to reference density');
+assert(run('treeObjects.slice(192).every(g=>extraTreeAllowed(...g.userData.grounding.rootXZ,[],[]))'),'Roads, clearings and path retained');
+run(`function prepareWaterSurface(){};createPuddle=(x,z,w,d,phase)=>puddles.push({position:new THREE.Vector3(x,.028,z),w,d,phase});preparePuddles();`);
+assert.equal(run('puddles.length'),54);assert(run('puddles.every(p=>puddleOutline(p.w,p.d,p.phase).every(([x,z])=>terrainFields(x+p.position.x,z+p.position.z).asphalt>=.96))'));
+const stars=run('createStarCatalogue()');assert.equal(stars.length,1100);assert.equal(new Set(stars.map(s=>s.direction.join(','))).size,1100);for(const s of stars){assert(Math.abs(Math.hypot(...s.direction)-1)<1e-9);assert(s.size<=2.2&&s.brightness>=.18&&s.brightness<=1);}assert(stars.filter(s=>s.brightness>.8).length<50);
+assert.equal(run('normalizeLightLabSettings({rain:{density:999,speed:0,wind:-999,glass:-1}}).rain.density'),300);assert.equal(run('normalizeLightLabSettings({rain:{wind:-999}}).rain.wind'),-200);
+for(const name of ['Fairheaven_LT80_Glass_Driver008','Fairheaven_LT80_Glass_Passanger008','Fairheaven_LT80_Windshield007','Fairheaven_SW80_Glass_Body002','Fairheaven_SW80_Glass_Rear002'])assert(run(`isVehicleWindow('${name}')`));
+for(const name of ['Fairheaven_LT80_LightbarEMS','Fairheaven_LT80_Headlights_Glass005','Fairheaven_LT80_Taillights_Glass007'])assert(!run(`isVehicleWindow('${name}')`));
+console.log('PASS: forest coverage/exclusions, varied asphalt-only puddles, irregular finite star catalogue, rain bounds and window-only condensation');

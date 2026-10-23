@@ -1,0 +1,180 @@
+{
+  "doors": "All closed, original model geometry",
+  "textures": [
+    {
+      "name": "Image_0",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_1",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_10",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_11",
+      "before": [
+        1024,
+        1024
+      ],
+      "after": [
+        341,
+        341
+      ]
+    },
+    {
+      "name": "Image_12",
+      "before": [
+        1024,
+        1024
+      ],
+      "after": [
+        341,
+        341
+      ]
+    },
+    {
+      "name": "Image_13",
+      "before": [
+        1024,
+        1024
+      ],
+      "after": [
+        341,
+        341
+      ]
+    },
+    {
+      "name": "Image_14",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        171,
+        171
+      ]
+    },
+    {
+      "name": "Image_2",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_3",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_4",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_5",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_6",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_7",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    },
+    {
+      "name": "Image_8",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        171,
+        171
+      ]
+    },
+    {
+      "name": "Image_9",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        683,
+        683
+      ]
+    }
+  ],
+  "sourceTriangles": 21325,
+  "outputTriangles": 21325,
+  "sha256": "51bb2462a0a666eccc81889247d2a9e716a4160a27a06f10efc6a1272f907a28",
+  "bytes": 4819940,
+  "version": "0.6.17",
+  "author": "Daniel Zhabotinsky",
+  "source": "https://sketchfab.com/3d-models/fairheaven-sw-80-fire-dept-low-poly-model-0cd661aaab6949ba9d77dbb13ab146c5",
+  "license": "CC BY 4.0",
+  "sourceBytes": 16852288,
+  "modifications": "Original closed geometry restored; no door cutouts. All 15 textures reduced to one third dimensions; static parts batched; animated lamps and exhaust retained."
+}

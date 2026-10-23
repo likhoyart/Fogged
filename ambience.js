@@ -10,7 +10,7 @@ class Ambience{
     const impulse=a.createBuffer(2,a.sampleRate*1.7,a.sampleRate);
     for(let ch=0;ch<2;ch++){const d=impulse.getChannelData(ch);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3)*.45;}
     this.buses={};this.verbs={};
-    for(const name of ['steps','thunder','rain','ambience','electrical']){
+    for(const name of ['steps','thunder','rain','ambience','electrical','engine']){
       const bus=a.createGain();bus.gain.value=+$(name+'Volume').value;bus.connect(this.master);this.buses[name]=bus;
       if(['steps','thunder','ambience'].includes(name)){const verb=a.createConvolver(),wet=a.createGain();verb.buffer=impulse;wet.gain.value=name==='steps'?.07:.18;verb.connect(wet);wet.connect(bus);this.verbs[name]=verb;}
     }
@@ -25,9 +25,17 @@ class Ambience{
     const gust=a.createOscillator(),gd=a.createGain();gust.frequency.value=.043;gd.gain.value=210;
     gust.connect(gd);gd.connect(filter.frequency);src.start();lfo.start();gust.start();
     this.next=10+Math.random()*10;
+    this.stepBuffers={};this.stepHistory=[];this.stepCounts={asphalt:0,ground:0,grass:0};this.stepVoices=new Set();this.lastStepIndex={};
+    this.footstepsReady=Promise.all(Object.entries(FOOTSTEP_ASSETS).filter(([surface])=>surface!=='grass').map(async([surface,clips])=>{this.stepBuffers[surface]=await Promise.all(clips.map(data=>a.decodeAudioData(Uint8Array.from(atob(data),c=>c.charCodeAt(0)).buffer)));})).catch(error=>console.error('Footsteps could not be decoded',error));
     this.flashOffset=0;this.flashPaused=false;this.flashRunning=false;
     const bytes=Uint8Array.from(atob(ELECTRICAL_EFFECT.data),c=>c.charCodeAt(0));
     this.electricalReady=a.decodeAudioData(bytes.buffer).then(buffer=>{this.electricalBuffer=buffer;}).catch(error=>{console.error('Electrical recording could not be decoded',error);});
+    const engineBytes=Uint8Array.from(atob(ENGINE_EFFECT.data),c=>c.charCodeAt(0));
+    this.engineGain=a.createGain();this.engineGain.gain.value=0;
+    const enginePan=this.enginePan=a.createPanner();enginePan.panningModel='HRTF';enginePan.distanceModel='inverse';enginePan.rolloffFactor=0;
+    enginePan.positionX.value=fireEnginePosition.x;enginePan.positionY.value=.65;enginePan.positionZ.value=fireEnginePosition.z;
+    this.engineGain.connect(enginePan);enginePan.connect(this.buses.engine);
+    this.engineReady=a.decodeAudioData(engineBytes.buffer).then(buffer=>{this.engineBuffer=buffer;const source=this.engineSource=a.createBufferSource();source.buffer=buffer;source.loop=true;source.connect(this.engineGain);source.start();}).catch(error=>console.error('Engine recording could not be decoded',error));
   }
   outputTime(){
     const a=this.ctx,stamp=a.getOutputTimestamp?.();
@@ -55,6 +63,13 @@ class Ambience{
     const l=this.ctx.listener,p=camera.position,f=new THREE.Vector3(0,0,-1).applyQuaternion(camera.quaternion),u=new THREE.Vector3(0,1,0).applyQuaternion(camera.quaternion);
     if(l.positionX){for(const [key,v] of Object.entries({positionX:p.x,positionY:p.y,positionZ:p.z,forwardX:f.x,forwardY:f.y,forwardZ:f.z,upX:u.x,upY:u.y,upZ:u.z}))l[key].value=v;}
     else{l.setPosition(p.x,p.y,p.z);l.setOrientation(f.x,f.y,f.z,u.x,u.y,u.z);}
+  }
+  footstep(position){
+    const surface=footstepSurface(position.x,position.z,this.lastSurface),audioSurface=surface==='grass'?'ground':surface,clips=this.stepBuffers[audioSurface];this.lastSurface=surface;if(!clips?.length)return;
+    const previous=this.lastStepIndex[audioSurface]??-1;let index=Math.floor(Math.random()*(clips.length-1));if(index>=previous&&previous>=0)index++;this.lastStepIndex[audioSurface]=index;
+    const a=this.ctx,source=a.createBufferSource(),gain=a.createGain(),pan=a.createStereoPanner();source.buffer=clips[index];source.playbackRate.value=.97+Math.random()*.06;gain.gain.value=.65;pan.pan.value=this.stepNumber%2?.12:-.12;this.stepNumber=(this.stepNumber||0)+1;
+    source.connect(gain);gain.connect(pan);pan.connect(this.buses.steps);pan.connect(this.verbs.steps);source.start();this.stepVoices.add(source);source.onended=()=>{source.disconnect();gain.disconnect();pan.disconnect();this.stepVoices.delete(source);};
+    this.stepCounts[surface]++;this.stepHistory.push({surface,audioSurface,index,x:+position.x.toFixed(2),z:+position.z.toFixed(2),time:+a.currentTime.toFixed(3)});if(this.stepHistory.length>24)this.stepHistory.shift();
   }
   sound(kind,position){
     const a=this.ctx,t=a.currentTime,duration=kind===0?3.6:kind===1?1.8:kind===2?1.4:.16;
@@ -88,10 +103,9 @@ class Ambience{
     pan.pan.value=.35;source.connect(filter);filter.connect(gain);gain.connect(pan);pan.connect(this.buses.thunder);gain.connect(this.verbs.thunder);
     source.start(t);source.stop(t+duration);source.onended=()=>[source,filter,gain,pan].forEach(n=>n.disconnect());
   }
-  update(dt){this.listener();this.next-=dt;if(this.next<=0){
+  update(dt){this.listener();this.engineGain.gain.setTargetAtTime(engineDistanceGain(camera.position.distanceTo(fireEnginePosition)),this.ctx.currentTime,.14);this.next-=dt;if(this.next<=0){
     const angle=Math.random()*Math.PI*2,r=10+Math.random()*7;
     this.sound(Math.floor(Math.random()*3),new THREE.Vector3(camera.position.x+Math.sin(angle)*r,1.2,camera.position.z+Math.cos(angle)*r));
     this.next=13+Math.random()*23;
   }}
 }
-

@@ -1,0 +1,158 @@
+{
+  "asphalt": {
+    "sourceFile": "asphalt.mp3",
+    "sourceDuration": 32.00870833333333,
+    "clips": [
+      {
+        "file": "audio/step-asphalt-1.wav",
+        "sourceStart": 4.550000000000001,
+        "duration": 0.38,
+        "gain": 6.0,
+        "sha256": "f19023d6aa373f6d47b7380d42e97189f0bff1b4745d8108fa39b93ebf7c2edd"
+      },
+      {
+        "file": "audio/step-asphalt-2.wav",
+        "sourceStart": 5.12,
+        "duration": 0.38,
+        "gain": 6.0,
+        "sha256": "475dc6b1b6042d8619df3b687de4255099cdf0cb9aeeb3ce67852049818f0b59"
+      },
+      {
+        "file": "audio/step-asphalt-3.wav",
+        "sourceStart": 5.550000000000001,
+        "duration": 0.38,
+        "gain": 6.0,
+        "sha256": "c7a81b7fdd9403a639886c80e514f6bbd95deafaebdcb7bbe73b056956dd04dc"
+      },
+      {
+        "file": "audio/step-asphalt-4.wav",
+        "sourceStart": 7.15,
+        "duration": 0.38,
+        "gain": 6.0,
+        "sha256": "62b260cbcae8f3ae8c9d34bcb68456a3d9c1864d26b2c83f7ad357d1de443649"
+      },
+      {
+        "file": "audio/step-asphalt-5.wav",
+        "sourceStart": 7.550000000000001,
+        "duration": 0.38,
+        "gain": 6.0,
+        "sha256": "3c75b298b6b3eba64baec3187ae3d198b4a8615f4a4951a1327953f8a4dfedbe"
+      },
+      {
+        "file": "audio/step-asphalt-6.wav",
+        "sourceStart": 9.49,
+        "duration": 0.38,
+        "gain": 6.0,
+        "sha256": "4c3eac7516783155a8c69b208980cf3a3576e14fb93f7556cd6b9e6159fa89c1"
+      }
+    ],
+    "fadeIn": 0.01,
+    "fadeOut": 0.06,
+    "provenance": "User-supplied recording, 2026-09-13",
+    "sourcePath": "/Volumes/art/Yandex.Disk.localized/mine/FOGPLAY/Музыка/asphalt.mp3"
+  },
+  "ground": {
+    "sourceFile": "ground.mp3",
+    "sourceDuration": 20.041125,
+    "clips": [
+      {
+        "file": "audio/step-ground-1.wav",
+        "sourceStart": 2.21,
+        "duration": 0.46,
+        "gain": 5.387209892272949,
+        "sha256": "2f53998e0c30f092297ba730da76bf2d1529bf17f1d85e97fa3afd4f954a8891"
+      },
+      {
+        "file": "audio/step-ground-2.wav",
+        "sourceStart": 2.98,
+        "duration": 0.46,
+        "gain": 6.0,
+        "sha256": "4337c1185a6baea0b3bf51cba34881bdbffe4fb0b8aec38d8b8b331cd1a7acd5"
+      },
+      {
+        "file": "audio/step-ground-3.wav",
+        "sourceStart": 3.73,
+        "duration": 0.46,
+        "gain": 6.0,
+        "sha256": "e4f1ed16220a11f784153941d855c6375ed9d39605e020aa76f3f88d4ba90cd1"
+      },
+      {
+        "file": "audio/step-ground-4.wav",
+        "sourceStart": 4.53,
+        "duration": 0.46,
+        "gain": 6.0,
+        "sha256": "98e3fc66c03d6e94ed9261839f4205256d6d36b903e430ca4da712785e44783b"
+      },
+      {
+        "file": "audio/step-ground-5.wav",
+        "sourceStart": 5.300000000000001,
+        "duration": 0.46,
+        "gain": 6.0,
+        "sha256": "2e52b0ca449b62bb12d33b46ef0a3469dc3559dce839519f6690276bfb985469"
+      },
+      {
+        "file": "audio/step-ground-6.wav",
+        "sourceStart": 6.92,
+        "duration": 0.46,
+        "gain": 6.0,
+        "sha256": "5e8d3bae8545ca43b769fe0dbf52167082e35f0c9fe881466aef49cbdfe8ecdb"
+      }
+    ],
+    "fadeIn": 0.01,
+    "fadeOut": 0.06,
+    "provenance": "User-supplied recording, 2026-09-13",
+    "sourcePath": "/Volumes/art/Yandex.Disk.localized/mine/FOGPLAY/Музыка/ground.mp3"
+  },
+  "grass": {
+    "sourceFile": "grass2.mp3",
+    "sourceDuration": 166.61004166666666,
+    "clips": [
+      {
+        "file": "audio/step-grass-1.wav",
+        "sourceStart": 103.29,
+        "duration": 0.46,
+        "gain": 1.9398983668730558,
+        "sha256": "84e436fcdef89af5e6d1fdd316604dc150c22cdf0425ed90d742c8ca95fb29c7"
+      },
+      {
+        "file": "audio/step-grass-2.wav",
+        "sourceStart": 113.55000000000001,
+        "duration": 0.46,
+        "gain": 1.600382989446352,
+        "sha256": "ad87e410a5caf9fccc22032aa46a61b11b5c5e51628906f36cddcb6a5b8134d5"
+      },
+      {
+        "file": "audio/step-grass-3.wav",
+        "sourceStart": 120.17,
+        "duration": 0.46,
+        "gain": 2.876892746272207,
+        "sha256": "e39839feb5a8283b825cf53d50ac8c88af6991099301a5da201e6e7697e0aa94"
+      },
+      {
+        "file": "audio/step-grass-4.wav",
+        "sourceStart": 123.98,
+        "duration": 0.46,
+        "gain": 3.5078014060446465,
+        "sha256": "4dd47c4ac9c9ee59dc2a55792a8c3fc32b95f8c7b8e7f72d34cff31780bdfb5d"
+      },
+      {
+        "file": "audio/step-grass-5.wav",
+        "sourceStart": 150.24,
+        "duration": 0.46,
+        "gain": 1.9884944794637511,
+        "sha256": "111c206421ff62961bf60254a67f7eb04f1f754fc5a9a28383498e12e1471a1d"
+      },
+      {
+        "file": "audio/step-grass-6.wav",
+        "sourceStart": 154.44,
+        "duration": 0.46,
+        "gain": 2.079661843925105,
+        "sha256": "34060aa1c7e1573d43b7623ee3d87f663def11f2138919f47da63bd3233d72fc"
+      }
+    ],
+    "fadeIn": 0.01,
+    "fadeOut": 0.06,
+    "provenance": "User-supplied recording, 2026-09-13",
+    "sourcePath": "/Volumes/art/Yandex.Disk.localized/mine/FOGPLAY/Музыка/grass2.mp3"
+  }
+}

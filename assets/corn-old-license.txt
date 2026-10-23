@@ -1,0 +1,12 @@
+Model Information:
+* title:	Corn old
+* source:	https://sketchfab.com/3d-models/corn-old-7e5ea415942a44b1b6de2e6c3bd05955
+* author:	Frice (https://sketchfab.com/Frice)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Corn old" (https://sketchfab.com/3d-models/corn-old-7e5ea415942a44b1b6de2e6c3bd05955) by Frice (https://sketchfab.com/Frice) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+Adaptation: textures reduced to 128 x 512; geometry preserved. Credit: DisoftGD. NoAI.

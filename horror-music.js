@@ -72,7 +72,18 @@
       try { localStorage.setItem(this.storageKey, String(this.volume)); } catch (_) {}
       this.emit();
     }
-    start() { return this.select(this.index, 1.5); }
+    start() { return this.userPaused?Promise.resolve(false):this.resume(); }
+    pause() {
+      this.userPaused=true;this.generation++;this.transition=null;this.busy=false;this.playing=false;
+      for(const [i,deck] of (this.decks||[]).entries()){deck.audio.pause();deck.gain.gain.cancelScheduledValues(this.ctx.currentTime);deck.gain.gain.setValueAtTime(i===this.index?1:0,this.ctx.currentTime);}
+      this.emit();
+    }
+    async resume() {
+      this.userPaused=false;
+      if(!this.decks)return this.select(this.index,1.5);
+      if(this.busy)return false;
+      await this.ctx.resume();await this.decks[this.index].audio.play();this.decks[this.index].gain.gain.setTargetAtTime(1,this.ctx.currentTime,.06);this.playing=true;this.emit();return true;
+    }
     next() { return this.select((this.index + 1) % this.tracks.length, this.manualFade); }
     previous() {
       return this.select((this.index + this.tracks.length - 1) % this.tracks.length, this.manualFade);
@@ -87,6 +98,7 @@
         return true;
       }
       this.busy = true;
+      this.userPaused=false;
       this.error = '';
       this.emit();
       const generation = this.generation;
@@ -134,7 +146,8 @@
         if (generation !== this.generation) return false;
         if (next) next.audio.pause();
         this.busy = false;
-        this.error = error.message || 'Could not start music';
+        console.warn('Music playback:', error);
+        this.error = 'Could not start music';
         this.retryAfter = Date.now() + 15000;
         this.emit();
         throw error;
@@ -157,6 +170,10 @@
         this.select((this.index + 1) % this.tracks.length, this.crossfade).catch(() => {});
     }
     bindControls(root) {
+      if(!root.querySelector('[data-music-toggle]')){
+        const toggle=document.createElement('button');toggle.type='button';toggle.dataset.musicToggle='';root.querySelector('.music-buttons').prepend(toggle);
+        const choose=document.createElement('select');choose.dataset.musicSelect='';choose.setAttribute('aria-label','Choose track');this.tracks.forEach((track,i)=>{const option=document.createElement('option');option.value=i;option.textContent=track.title;choose.append(option);});root.querySelector('.music-heading').after(choose);
+      }
       const prev = root.querySelector('[data-music-prev]');
       const next = root.querySelector('[data-music-next]');
       const slider = root.querySelector('[data-music-volume]');
@@ -164,16 +181,20 @@
       const output = root.querySelector('[data-music-percent]');
       const status = root.querySelector('[data-music-status]');
       const abort = new AbortController(), options = { signal: abort.signal };
+      const toggle=root.querySelector('[data-music-toggle]'),choose=root.querySelector('[data-music-select]');
+      toggle.addEventListener('click',()=>{if(this.playing)this.pause();else this.resume().catch(()=>{});},options);
+      choose.addEventListener('change',()=>this.select(+choose.value).catch(()=>{}),options);
       prev?.addEventListener('click', () => this.previous().catch(() => {}), options);
       next?.addEventListener('click', () => this.next().catch(() => {}), options);
       slider?.addEventListener('input', () => this.setVolume(Number(slider.value) / 100), options);
       const render = () => {
         const state = this.state;
+        toggle.textContent=state.playing?'Pause music':'Play music';toggle.disabled=state.busy;choose.value=String(state.index);choose.disabled=state.busy;
         if (title) title.textContent = state.title;
         if (slider) slider.value = String(Math.round(state.volume * 100));
         if (output) output.textContent = Math.round(state.volume * 100) + '%';
-        if (prev) prev.disabled = state.busy || !state.playing;
-        if (next) next.disabled = state.busy || !state.playing;
+        if (prev) prev.disabled = state.busy;
+        if (next) next.disabled = state.busy;
         if (status) status.textContent = state.error || (state.busy ? 'Crossfading…' : '');
       };
       this.addEventListener('change', render, options);

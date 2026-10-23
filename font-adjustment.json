@@ -1,0 +1,332 @@
+[
+  {
+    "character": "Ё",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "А",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Б",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "В",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Г",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Д",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Е",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ж",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "З",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "И",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Й",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "К",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Л",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "М",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Н",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "О",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "П",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Р",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "С",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Т",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "У",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ф",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Х",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ц",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ч",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ш",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Щ",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ъ",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ы",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ь",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Э",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Ю",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "Я",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "а",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "б",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "в",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "г",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "д",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "е",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ж",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "з",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "и",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "й",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "к",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "л",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "м",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "н",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "о",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "п",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "р",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "с",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "т",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "у",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ф",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "х",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ц",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ч",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ш",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "щ",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ъ",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ы",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ь",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "э",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ю",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "я",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  },
+  {
+    "character": "ё",
+    "beforeAdvance": 1000,
+    "afterAdvance": 500
+  }
+]

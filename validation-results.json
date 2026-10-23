@@ -1,16 +1,15 @@
 {
-  "version": "0.6.9",
-  "syntax": "all top-level JS passed node --check",
-  "local_refs": "ok",
-  "station_glb": "valid GLB 2.0; all embedded images decode",
-  "garage_numbering": "texture quadrants A=3, B=4, C=1, D=2; after 180-degree station placement this presents 1-2-3-4 from visible left to right",
-  "station_lighting": "four LED bars; spotlight targets and visual wash remain below fixtures",
-  "constellations": "Northern Cross only; no guide lines",
-  "moon": "waxing phase shader with crisp limb and terminator",
-  "removed_building": "05A not loaded/placed",
-  "grass": "secondary short lawn blades added only at accepted grass tufts",
-  "lighthouse": "109000 physical intensity (2x), 2x volumetric color term, tightened cone feather, same 0.1475 rad angle",
-  "rain": "larger world streak lengths and glass-drop radii",
-  "flashlight": "72 vs previous 48 (1.5x); volumetric divisor remains 48 so beam scattering scales 1.5x",
-  "lightning": "two rapid pulses"
+  "version": "0.6.30",
+  "passed": [
+    "localization.test.cjs",
+    "pause-resume.test.cjs"
+  ],
+  "browser": [
+    "16 destinations",
+    "teleport x54 z-65",
+    "auto collapse",
+    "T toggle",
+    "Escape close",
+    "no console errors"
+  ]
 }

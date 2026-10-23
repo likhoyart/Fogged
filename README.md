@@ -1,19 +1,42 @@
-WASD — move · Shift — run · Space — jump · Mouse — look · Esc — pause · M — mute effects.
+# Fogged v0.6.31 — мобильное управление
 
-## v0.6.9 changes
+Мобильная версия работает в браузере без установки. Экранное управление появляется автоматически на устройствах с сенсорным экраном, а на компьютере доступно для проверки по адресу `index.html?mobile=1`. Обычное управление WASD / мышь / Shift / пробел / Esc / M сохранено.
 
-- Fire-station garage numbers now read **1 → 2 → 3 → 4 from the player’s visible left to right**. The order is corrected in the embedded source texture, accounting for the station model’s 180° placement rotation.
-- Four compact LED bars remain at roughly 40–50% of each garage-bay width. Their light and visual wash are constrained below the fixtures; the upper facade is not intentionally illuminated.
-- LED flicker remains grouped and follows the same electrical waveform as the player flashlight.
-- The named sky pattern is now **only Cygnus / the Northern Cross**, rendered as stars without guide lines. Other named constellations and Polaris markers were removed.
-- The moon is a crisp, brighter **waxing moon** with a sharp outer limb, visible curved terminator, restrained halo and subtle surface variation.
-- The problematic imported building beside the ruined/shop structure in the north-east sector (`05A`) is no longer loaded or placed.
-- Existing grass areas receive a secondary short lawn layer beneath the taller blades.
-- Lighthouse physical intensity is doubled from `54500` to `109000`; its volumetric contribution is doubled as well, while the `0.1475` rad cone angle is retained and the penumbra is tightened for a clearer beam.
-- Rain streaks and windshield droplets are larger.
-- Player flashlight physical intensity is increased from `48` to `72` (1.5×), with matching volumetric brightness.
-- Lightning now produces two fast bright pulses instead of one long fading flash.
+- Левый джойстик: плавное движение вперёд, назад и в стороны. Скорость зависит от отклонения.
+- Правая часть экрана: обзор камеры движением пальца. Поддерживаются одновременные касания обеих зон.
+- JUMP: прыжок. RUN: включение/выключение бега нажатием.
+- Верхние кнопки: звук и пауза / продолжение через меню.
+- Разрешение `Adaptive (mobile)`: динамическое масштабирование под экран и поворот устройства, с ограничением размера для мобильного GPU. По умолчанию используется при первом открытии на телефоне.
+- Горизонтальная ориентация рекомендована, вертикальная поддерживается. Элементы учитывают системные отступы экранов с вырезами.
 
-## Debug inspection
+Для публикации на GitHub Pages скопируйте содержимое **папки игры** в корень репозитория `likhoyart/Fogged` (вместе с папками `assets` и `audio`), заменяя прежние файлы. Не загружайте только архив ZIP в качестве сайта. Если Pages уже настроен на ветку `main` и каталог `/ (root)`, адрес остаётся прежним: `https://likhoyart.github.io/Fogged/`.
 
-Add `?debug` to the URL for location shortcuts and scene diagnostics, including fire-station gates and several lighthouse viewing distances.
+Содержимое исходной версии 0.6.30, настройки, материалы и локации сохранены.
+
+---
+
+# Fogged v0.6.30 — быстрое перемещение
+
+Отдельная сворачиваемая панель в тестовом режиме (?debug): иконка карты слева, клавиша T. 16 кнопок основных мест, все прежние точки доступны в раскрывающемся списке. Esc сворачивает панель. После перехода панель закрывается, скорость, прыжок и накопленные шаги сбрасываются. Серо-белый стиль, прямые углы, русский и английский интерфейс. При раскрытии одного тестового окна другое сворачивается.
+
+# Fogged v0.6.29 — кукурузное поле
+
+Поле Corn old: x 21–91 м, z −99…−34 м, за домами в северо-восточном секторе. Размер 70 × 65 м, 6986 стеблей высотой 2,2–2,8 м. Между рядами 0,88 м, посадка нерегулярная. Стебли не блокируют движение, отклоняются при контакте и плавно возвращаются. Шорох синтезирован из фильтрованного шума, зависит от контакта и скорости, регулируется громкостью шагов.
+
+545 треугольников на растение сохранены полностью. 21 часть объединена в один меш. Текстуры 128 × 512; 56 пространственных групп с отсечением в тумане. Высота корней рассчитана точно по треугольникам поверхности. Деревья внутри поля удалены вместе с препятствиями; трава прорежена.
+
+В тестовом меню «Осмотр локаций»: край поля, центр и дальний край. Визуальная оценка оставлена пользователю.
+
+# Fogged v0.6.29
+
+- Шесть люков увеличены вдвое по диаметру.
+- Двигатель плавно становится слышен с 20 метров.
+- Молния: две вспышки по 65 мс, промежуток 95 мс, яркость 180%; настройки на вкладке «Молния».
+- Окна станции за машиной: тёмное стекло с отражением сцены.
+- Мерцание интерфейса отключено; ширина русских букв приведена к латинской.
+- Настройки сцены, маяка, столбов и фонарика установлены по скриншотам 13 сентября 14:20–14:22.
+- Высокая трава 60–100 см растёт нерегулярными группами вне дорог и тропы.
+- Склад развёрнут входом к дороге; проход открыт, оригинальный интерьер и текстуры 1024×1024 сохранены.
+
+Осмотр: ?debug → шестерёнка → «Осмотр локаций» → «Окна станции», «Склад», «Внутри склада», «Люки».
+Визуальная оценка оставлена пользователю. Предыдущая версия сохранена отдельно.

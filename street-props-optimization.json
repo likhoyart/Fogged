@@ -1,0 +1,361 @@
+[
+  {
+    "asset": "barrier",
+    "source": "https://polyhaven.com/a/concrete_road_barrier_02",
+    "license": "CC0",
+    "originalTriangles": 23822,
+    "optimizedTriangles": 5002,
+    "authorLOD": 2,
+    "maxSurfaceErrorMeters": 0.00436009606346488,
+    "rmsSurfaceErrorMeters": 0.0007962838297859406,
+    "originalSizeMeters": [
+      1.565882682800293,
+      0.4420780539512634,
+      1.1106914281845093
+    ],
+    "textures": [
+      {
+        "name": "concrete_road_barrier_02_disp.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "concrete_road_barrier_02_diff.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "concrete_road_barrier_02_nor_gl.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "concrete_road_barrier_02_rough.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      }
+    ],
+    "bytes": 807280,
+    "gateOpeningDegrees": null
+  },
+  {
+    "asset": "gate",
+    "source": "https://polyhaven.com/a/large_iron_gate",
+    "license": "CC0",
+    "originalTriangles": 38140,
+    "optimizedTriangles": 38122,
+    "authorLOD": null,
+    "maxSurfaceErrorMeters": 0.0,
+    "rmsSurfaceErrorMeters": 0.0,
+    "originalSizeMeters": [
+      2.95009183883667,
+      0.09733648598194122,
+      2.9286537170410156
+    ],
+    "textures": [
+      {
+        "name": "large_iron_gate_diff.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "large_iron_gate_metal.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "large_iron_gate_rough.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "large_iron_gate_nor_gl.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      }
+    ],
+    "bytes": 1520064,
+    "gateOpeningDegrees": 100
+  },
+  {
+    "asset": "manhole",
+    "source": "https://polyhaven.com/a/water_manhole_cover",
+    "license": "CC0",
+    "originalTriangles": 6301,
+    "optimizedTriangles": 6298,
+    "authorLOD": null,
+    "maxSurfaceErrorMeters": 3.725290298461914e-09,
+    "rmsSurfaceErrorMeters": 4.613561598752345e-11,
+    "originalSizeMeters": [
+      0.6907604932785034,
+      0.6907604932785034,
+      0.06761780381202698
+    ],
+    "textures": [
+      {
+        "name": "water_manhole_cover_nor_gl.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "water_manhole_cover_diff.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "water_manhole_cover_metal.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "water_manhole_cover_rough.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      }
+    ],
+    "bytes": 905564,
+    "gateOpeningDegrees": null
+  },
+  {
+    "asset": "stump",
+    "source": "https://polyhaven.com/a/tree_stump_01",
+    "license": "CC0",
+    "originalTriangles": 41046,
+    "optimizedTriangles": 12309,
+    "authorLOD": null,
+    "maxSurfaceErrorMeters": 0.010848386213183403,
+    "rmsSurfaceErrorMeters": 0.0008388270319838731,
+    "originalSizeMeters": [
+      1.424414873123169,
+      1.5901882648468018,
+      0.5731593370437622
+    ],
+    "textures": [
+      {
+        "name": "tree_stump_01_rough.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "tree_stump_01_diff.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "tree_stump_01_nor_gl.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      }
+    ],
+    "bytes": 1025788,
+    "gateOpeningDegrees": null
+  },
+  {
+    "asset": "trunk",
+    "source": "https://polyhaven.com/a/dead_tree_trunk_02",
+    "license": "CC0",
+    "originalTriangles": 83128,
+    "optimizedTriangles": 10390,
+    "authorLOD": 3,
+    "maxSurfaceErrorMeters": 0.018442509695887566,
+    "rmsSurfaceErrorMeters": 0.0015488051561666195,
+    "originalSizeMeters": [
+      4.053496360778809,
+      1.056610345840454,
+      1.0537077188491821
+    ],
+    "textures": [
+      {
+        "name": "dead_tree_trunk_02_rough.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "dead_tree_trunk_02_nor_gl.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "dead_tree_trunk_02_diff.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      }
+    ],
+    "bytes": 962300,
+    "gateOpeningDegrees": null
+  },
+  {
+    "asset": "broken-bicycle",
+    "source": "https://sketchfab.com/3d-models/bicycle-collection-free-980b7f6ddcfb434cbd347d919ddbef06",
+    "author": "Nicholas-3D",
+    "license": "CC BY 4.0",
+    "objects": [
+      "Bicycle_Broken",
+      "Bicycle_Broken_Wheel_1",
+      "Bicycle_Broken_Wheel_2"
+    ],
+    "originalTriangles": 50560,
+    "optimizedTriangles": 50314,
+    "textures": [
+      {
+        "name": "Bicycle_BicycleTrim_Rusty_Roughness.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "Bicycle_BicycleTrim_Rusty_BaseColor.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "Bicycle_BicycleTrim_Rusty_Metallic.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      },
+      {
+        "name": "Bicycle_BicycleTrim_Rusty_Normal.png",
+        "original": [
+          1024,
+          1024
+        ],
+        "optimized": [
+          341,
+          341
+        ]
+      }
+    ],
+    "method": "Coplanar dissolve only, preserving normal/UV/material boundaries and all spokes; texture dimensions divided by three",
+    "bytes": 2337832,
+    "sizeMeters": [
+      2.0119080543518066,
+      0.6462582945823669,
+      0.8487723469734192
+    ]
+  }
+]

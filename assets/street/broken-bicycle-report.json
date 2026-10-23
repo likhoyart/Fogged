@@ -1,0 +1,66 @@
+{
+  "asset": "broken-bicycle",
+  "source": "https://sketchfab.com/3d-models/bicycle-collection-free-980b7f6ddcfb434cbd347d919ddbef06",
+  "author": "Nicholas-3D",
+  "license": "CC BY 4.0",
+  "objects": [
+    "Bicycle_Broken",
+    "Bicycle_Broken_Wheel_1",
+    "Bicycle_Broken_Wheel_2"
+  ],
+  "originalTriangles": 50560,
+  "optimizedTriangles": 50314,
+  "textures": [
+    {
+      "name": "Bicycle_BicycleTrim_Rusty_Roughness.png",
+      "original": [
+        1024,
+        1024
+      ],
+      "optimized": [
+        341,
+        341
+      ]
+    },
+    {
+      "name": "Bicycle_BicycleTrim_Rusty_BaseColor.png",
+      "original": [
+        1024,
+        1024
+      ],
+      "optimized": [
+        341,
+        341
+      ]
+    },
+    {
+      "name": "Bicycle_BicycleTrim_Rusty_Metallic.png",
+      "original": [
+        1024,
+        1024
+      ],
+      "optimized": [
+        341,
+        341
+      ]
+    },
+    {
+      "name": "Bicycle_BicycleTrim_Rusty_Normal.png",
+      "original": [
+        1024,
+        1024
+      ],
+      "optimized": [
+        341,
+        341
+      ]
+    }
+  ],
+  "method": "Coplanar dissolve only, preserving normal/UV/material boundaries and all spokes; texture dimensions divided by three",
+  "bytes": 2337832,
+  "sizeMeters": [
+    2.0119080543518066,
+    0.6462582945823669,
+    0.8487723469734192
+  ]
+}

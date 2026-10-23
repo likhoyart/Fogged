@@ -1,0 +1,47 @@
+/* Fogged touch controls. Hidden in desktop/pointer-lock mode. */
+.controls-mobile{display:none}
+.fogged-touch .controls-mobile{display:block}
+.fogged-touch .controls-desktop{display:none}
+#mobile-controls[hidden]{display:none!important}
+#mobile-controls{display:none}
+.fogged-touch body>canvas{touch-action:none}
+.fogged-touch #mobile-controls{display:block;position:fixed;inset:0;z-index:5;pointer-events:none;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.fogged-touch #mobile-look{position:absolute;right:0;top:0;bottom:0;width:65%;pointer-events:auto;touch-action:none;cursor:crosshair}
+.fogged-touch #mobile-joystick{position:absolute;left:max(22px,env(safe-area-inset-left));bottom:max(27px,calc(env(safe-area-inset-bottom) + 17px));width:124px;height:124px;border-radius:50%;border:1px solid #dedede65;background:#171c1e55;box-shadow:inset 0 0 0 1px #ffffff14;pointer-events:auto;touch-action:none;display:grid;place-items:center}
+.fogged-touch #mobile-joystick:before,.fogged-touch #mobile-joystick:after{content:"";position:absolute;background:#dedede40;pointer-events:none}
+.fogged-touch #mobile-joystick:before{width:1px;height:74%}.fogged-touch #mobile-joystick:after{height:1px;width:74%}
+.fogged-touch #mobile-stick{position:relative;z-index:1;display:block;width:53px;height:53px;border-radius:50%;border:1px solid #f2f2f2a3;background:#aab5b54d;box-shadow:0 0 20px #0005;will-change:transform;pointer-events:none}
+.fogged-touch #mobile-joystick.is-engaged{border-color:#f4f4f4ab;background:#252c2d7c}
+.fogged-touch .mobile-action{pointer-events:auto;touch-action:none;display:grid;place-items:center;padding:0;margin:0;border:1px solid #ecececa0;border-radius:50%;background:#242a2bbb;color:#efefef;font:12px/1 "DotGothic16",monospace;letter-spacing:.035em;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);user-select:none;-webkit-user-select:none;min-width:52px;min-height:52px}
+.fogged-touch .mobile-action.is-engaged,.fogged-touch .mobile-action:active{background:#b0b7b5bb;color:#111;box-shadow:0 0 0 2px #ffffff22}
+.fogged-touch .mobile-actions{position:absolute;bottom:max(30px,calc(env(safe-area-inset-bottom) + 20px));right:max(22px,env(safe-area-inset-right));display:flex;gap:19px;align-items:flex-end;pointer-events:none}
+.fogged-touch #mobile-jump{width:76px;height:76px;font-size:15px}
+.fogged-touch #mobile-run{width:62px;height:62px;margin-bottom:16px;font-size:11px}
+.fogged-touch .mobile-top{position:absolute;right:max(17px,env(safe-area-inset-right));top:max(15px,calc(env(safe-area-inset-top) + 9px));display:flex;gap:10px;pointer-events:none}
+.fogged-touch .mobile-top .mobile-action{width:44px;height:44px;min-width:44px;min-height:44px;border-radius:4px;font-size:16px}
+.fogged-touch #mobile-pause{font-size:22px}
+.fogged-touch #mobile-sound.is-muted{opacity:.55}
+.fogged-touch #hud{bottom:auto;top:max(18px,calc(env(safe-area-inset-top) + 12px));left:max(19px,env(safe-area-inset-left));right:auto;font-size:10px}
+.fogged-touch #soundLabel{display:none}
+.fogged-touch #fps{top:max(43px,calc(env(safe-area-inset-top) + 39px));left:max(19px,env(safe-area-inset-left));right:auto;font-size:10px;padding:4px 6px}
+.fogged-touch #note{bottom:29%;left:16%;right:16%;font-size:15px}
+.fogged-touch #menu{padding:calc(env(safe-area-inset-top) + 16px) calc(env(safe-area-inset-right) + 16px) calc(env(safe-area-inset-bottom) + 16px) calc(env(safe-area-inset-left) + 16px);overscroll-behavior:contain;align-items:flex-start}
+.fogged-touch #menu .panel{max-height:none;overflow:visible;width:100%;max-width:480px;flex:0 0 min(480px,100%)}
+.fogged-touch #menu #pause-map{max-width:50%;min-width:0}
+.fogged-touch #menu .panel h1{font-size:clamp(43px,9vw,66px)}
+.fogged-touch #menu .controls{font-size:12px;line-height:1.8}
+.fogged-touch #menu .options label{font-size:12px}
+@media (orientation:portrait){
+ .fogged-touch #menu{display:block}
+ .fogged-touch #menu #pause-map{max-width:100%;margin:20px 0 0}
+ .fogged-touch #mobile-joystick{width:116px;height:116px;left:max(17px,env(safe-area-inset-left))}
+ .fogged-touch .mobile-actions{right:max(17px,env(safe-area-inset-right));gap:13px}
+ .fogged-touch #mobile-jump{width:68px;height:68px}
+ .fogged-touch #mobile-run{width:57px;height:57px}
+}
+@media (max-height:430px) and (orientation:landscape){
+ .fogged-touch #mobile-joystick{width:104px;height:104px;bottom:max(13px,env(safe-area-inset-bottom))}
+ .fogged-touch .mobile-actions{bottom:max(13px,env(safe-area-inset-bottom))}
+ .fogged-touch #mobile-jump{height:65px;width:65px}
+ .fogged-touch #mobile-run{height:55px;width:55px}
+}

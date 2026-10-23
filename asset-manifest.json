@@ -1,6 +1,6 @@
 {
-  "version": "0.6.9",
-  "status": "Diffuse streetlight halos; softer flashlight; stronger rain; no breathing or player hand",
+  "version": "0.6.30",
+  "status": "Collapsible bilingual quick travel test panel",
   "units": "metres",
   "axes": "X east, Y up, Z south; origin at junction centre",
   "assets": [
@@ -61,7 +61,7 @@
       "licenseVerifiedThisIteration": false,
       "downloaded": true,
       "file": "assets/03.js",
-      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
+      "transformStatus": "Removed from runtime layout by user request; original payload retained for provenance",
       "sha256GLB": "3bf8375572134dc78b22e1fd29d32ba54bdf7f39762de4c9200c09e816209382",
       "positionXZ": [
         15,
@@ -71,7 +71,8 @@
       "targetHeightMetres": 8.3,
       "trianglesBefore": 9985,
       "trianglesAfter": 9315,
-      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+      "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2.",
+      "placed": false
     },
     {
       "id": "04",
@@ -144,16 +145,16 @@
       "licenseVerifiedThisIteration": false,
       "downloaded": true,
       "file": "assets/06.js",
-      "transformStatus": "normalized_with_all_used_UV_channels; ground_y_0",
-      "sha256GLB": "b0de356e19160bb43be9d3b95e607b0e78149f3c4c538f6c3c7f44b074cdf6d1",
+      "transformStatus": "Open shutter; original interior textures and structure retained; separate wall/floor colliders",
+      "sha256GLB": "7bd4a0653502b6f3a78cf5d6408e08bfa0b4bd6ec942c25e3d0300821cdd6f2f",
       "positionXZ": [
-        89,
-        -3
+        104,
+        0
       ],
-      "yawDegrees": 0.0,
+      "yawDegrees": -90,
       "targetWidthMetres": 16,
       "trianglesBefore": 11106,
-      "trianglesAfter": 9342,
+      "trianglesAfter": 9338,
       "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
     },
     {
@@ -307,6 +308,135 @@
       "note": "Replaces the signal flashlight. Textures resized/repacked; uniform length 0.38m.",
       "sha256GLB": "b734f06f3b7a5ddfcbfd6593e8d3204a82222fe18039f1608663580f3f965981",
       "licenseVerificationNote": "License retained from previously verified download; no new third-party models in v0.6.2."
+    },
+    {
+      "id": "FIRE_ENGINE",
+      "name": "Fairheaven SW 80 Fire Dept. - Low Poly Model",
+      "author": "Daniel Zhabotinsky",
+      "url": "https://sketchfab.com/3d-models/fairheaven-sw-80-fire-dept-low-poly-model-0cd661aaab6949ba9d77dbb13ab146c5",
+      "licenseReported": "CC BY 4.0",
+      "licenseVerifiedThisIteration": false,
+      "downloaded": true,
+      "file": "assets/FIRE_ENGINE.js",
+      "sha256GLB": "51bb2462a0a666eccc81889247d2a9e716a4160a27a06f10efc6a1272f907a28",
+      "positionXZ": [
+        9,
+        11
+      ],
+      "yawDegrees": 135,
+      "trianglesBefore": 21325,
+      "trianglesAfter": 21325,
+      "modifications": "Original closed geometry restored; no door cutouts. All 15 textures reduced to one third dimensions; static parts batched; animated lamps and exhaust retained.",
+      "textureScale": "1/3 width and height, rounded"
+    },
+    {
+      "id": "STREET_barrier",
+      "name": "barrier",
+      "url": "https://polyhaven.com/a/concrete_road_barrier_02",
+      "approval": "approved",
+      "licenseReported": "CC0",
+      "downloaded": true,
+      "file": "assets/street/barrier.js",
+      "sha256GLB": "92532c429e65d8357cecb37eac86477fa5046eaf3e12f308f2baae81cf5e3f71",
+      "trianglesBefore": 23822,
+      "trianglesAfter": 5002,
+      "textureDimensions": [
+        341,
+        341
+      ]
+    },
+    {
+      "id": "STREET_gate",
+      "name": "gate",
+      "url": "https://polyhaven.com/a/large_iron_gate",
+      "approval": "approved",
+      "licenseReported": "CC0",
+      "downloaded": true,
+      "file": "assets/street/gate.js",
+      "sha256GLB": "a12f08c2c50fd32ab99dcbed13d5f23ddee0bdf1822fc53ac0905e904d447dd4",
+      "trianglesBefore": 38140,
+      "trianglesAfter": 38122,
+      "textureDimensions": [
+        341,
+        341
+      ]
+    },
+    {
+      "id": "STREET_manhole",
+      "name": "manhole",
+      "url": "https://polyhaven.com/a/water_manhole_cover",
+      "approval": "approved",
+      "licenseReported": "CC0",
+      "downloaded": true,
+      "file": "assets/street/manhole.js",
+      "sha256GLB": "ee5b53ce3af7e80f94861e4cdafcc43e1addc1d81e652995e3e0ea94ef7119b8",
+      "trianglesBefore": 6301,
+      "trianglesAfter": 6298,
+      "textureDimensions": [
+        341,
+        341
+      ],
+      "instanceScale": 2
+    },
+    {
+      "id": "STREET_stump",
+      "name": "stump",
+      "url": "https://polyhaven.com/a/tree_stump_01",
+      "approval": "approved",
+      "licenseReported": "CC0",
+      "downloaded": true,
+      "file": "assets/street/stump.js",
+      "sha256GLB": "f6cbb6a20edeb3ecd87523d7bb8bf9314db45330359051c0c49ace6d695491b6",
+      "trianglesBefore": 41046,
+      "trianglesAfter": 12309,
+      "textureDimensions": [
+        341,
+        341
+      ]
+    },
+    {
+      "id": "STREET_trunk",
+      "name": "trunk",
+      "url": "https://polyhaven.com/a/dead_tree_trunk_02",
+      "approval": "approved",
+      "licenseReported": "CC0",
+      "downloaded": true,
+      "file": "assets/street/trunk.js",
+      "sha256GLB": "0689554e53584fa79de4617e75a7adbef91aa53704f69d2c145c863e055a0ca5",
+      "trianglesBefore": 83128,
+      "trianglesAfter": 10390,
+      "textureDimensions": [
+        341,
+        341
+      ]
+    },
+    {
+      "id": "STREET_broken-bicycle",
+      "name": "broken-bicycle",
+      "url": "https://sketchfab.com/3d-models/bicycle-collection-free-980b7f6ddcfb434cbd347d919ddbef06",
+      "approval": "approved",
+      "licenseReported": "CC BY 4.0",
+      "downloaded": true,
+      "file": "assets/street/broken-bicycle.js",
+      "sha256GLB": "351868e0510c5eed4355f4bdaf43ea93ce1737f27f7cc3ac1da1dd368a37e50b",
+      "trianglesBefore": 50560,
+      "trianglesAfter": 50314,
+      "textureDimensions": [
+        341,
+        341
+      ]
+    },
+    {
+      "id": "corn-old",
+      "author": "DisoftGD (Frice)",
+      "url": "https://sketchfab.com/3d-models/corn-old-7e5ea415942a44b1b6de2e6c3bd05955",
+      "license": "CC BY-NC 4.0",
+      "triangles": 545,
+      "instances": 6986,
+      "textureSize": [
+        128,
+        512
+      ]
     }
   ],
   "map": {
@@ -503,11 +633,50 @@
   },
   "pending": [],
   "validation": {
-    "browserAssets": "PASS: real GLTFLoader and browser image decoding; UV channels checked",
-    "geometry": "PASS: all building bounds meet y=0",
-    "navigation": "PASS: spawn, nine routes and wall collision",
-    "settings": "PASS: CPU checks for all resolution and color presets, quality and FPS visibility",
-    "rendering": "NOT VERIFIED: Chrome WebGL disabled",
-    "performance": "Geometry and texture reductions measured; FPS gain not measured"
+    "currentReport": "VALIDATION.md",
+    "browser": "Codex built-in browser, WebGL rendering verified",
+    "performance": "Not an isolated benchmark; see VALIDATION.md"
+  },
+  "runtimeRemovedAssets": [
+    "02",
+    "03"
+  ],
+  "terrain": {
+    "file": "terrain-assets.js",
+    "provenance": "terrain-sources.json",
+    "license": "CC0",
+    "materials": [
+      "leafy_grass",
+      "sparse_grass",
+      "grass_path_2"
+    ]
+  },
+  "vegetation": {
+    "grassTufts": 261130,
+    "previousGrassTufts": 130935,
+    "borderTrees": 48,
+    "previousBorderTrees": 24,
+    "forestTrees": 144,
+    "previousForestTrees": 48
+  },
+  "stationNumbers": "1–2–3–4 left to right from street, color-atlas digit remapping in town.js",
+  "worldDetails": {
+    "trees": 536,
+    "addedTrees": 344,
+    "puddles": 52,
+    "emptyCardboardBoxes": 28,
+    "stars": 1100,
+    "condensedWindowMeshes": 5
+  },
+  "interfaceFont": {
+    "family": "DotGothic16",
+    "weights": [
+      400
+    ],
+    "license": "SIL OFL 1.1",
+    "files": [
+      "DotGothic16-Regular.ttf"
+    ],
+    "source": "User supplied original font; DotGothic16-OFL.txt included"
   }
 }
